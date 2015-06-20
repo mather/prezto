@@ -15,3 +15,5 @@ for f in `ls $HOME/.zshrc.d/*.sh`
 do
     source $f
 done
+
+export VISUAL=vim
