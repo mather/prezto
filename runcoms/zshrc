@@ -7,12 +7,17 @@
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  # shellcheck disable=SC1090,SC1091
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
 # Customize to your needs...
-for f in ${HOME}/.zshrc.d/*.sh
+for f in "$HOME"/.zshrc.d/*
 do
+  # shellcheck disable=SC1090,SC1091
   source "$f"
 done
+
+export VISUAL=vim
+export EDITOR=vim
 
